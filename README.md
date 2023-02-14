@@ -1,15 +1,19 @@
-## Run kafka containers
+## Run kafka and app containers
 
-```cd microservices-demo/docker-compose```
+`cd microservices-demo/docker-compose`
 
-```docker-compose -f common.yml -f kafka_cluster.yml up```    
+`docker-compose -f common.yml -f kafka_cluster.yml -f services.yml up`
+
+or
+
+`docker-compose up`
 
 ## Run kafkacat container
 
-```docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b localhost:19092```
+`docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b localhost:19092`
 
-## Run the application
+## Build the application and a docker image
 
-```cd microservices-demo```
+`cd microservices-demo`
 
-```mvn install -DskipTests```
+`mvn install -DskipTests`

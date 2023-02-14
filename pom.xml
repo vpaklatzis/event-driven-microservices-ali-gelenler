@@ -128,6 +128,12 @@
                 <version>${avro.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>javax.annotation-api</artifactId>
+                <version>${javax-annotation.version}</version>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/io.confluent/kafka-avro-serializer -->
             <dependency>
                 <groupId>io.confluent</groupId>
